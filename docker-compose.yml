@@ -1,0 +1,12 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    ports:
+      - '5435:5432'
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: poc_adminjs_v1
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
